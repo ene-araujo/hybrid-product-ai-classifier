@@ -1,58 +1,79 @@
-# hybrid-product-ai-classifier
-Bilingual ML pipeline for e-commerce product normalization and classification (EN/BR, real + synthetic data)
-
-**Author:** Ananias Araujo
+# Hybrid Product AI Classifier  
+*A bilingual ML project combining structured + unstructured product data*
 
 ---
 
-## Overview (EN)
+## English — Overview
 
-**Hybrid Product AI Classifier** is a professional project designed to normalize and categorize e-commerce product data. It combines **real and synthetic datasets** to simulate real-world scenarios and supports a **bilingual pipeline (EN/BR)**. The system leverages **Word2Vec embeddings + XGBoost classifier** for intelligent product categorization.
+**Hybrid Product AI Classifier** is a practical machine learning project designed to classify consumer product parts using:
 
-**Key Features:**
-- Bilingual data preprocessing (English + Portuguese)
-- Word2Vec embeddings for semantic understanding
-- XGBoost classification baseline
-- Product deduplication & clustering
-- API + minimal UI for human-in-the-loop validation
-- Modular, production-ready architecture
+- **Structured data**  
+  (SKU attributes, categories, groups, functional specs)
+- **Unstructured data**  
+  (technical descriptions, manuals, tags, naming patterns)
 
-**Flow Diagram:**  
+The solution unifies catalog organization into a **standardized technical taxonomy**, supporting premium product ecosystems (e.g., Appliances, HVAC, Wine Storage, Gas Grills).
 
-flowchart LR
-A[Raw data: real + synthetic] --> B[Cleaning & preprocessing EN/BR]
-B --> C[Word2Vec Embeddings]
-C --> D[XGBoost Classifier]
-D --> E[Validation & Metrics]
-E --> F[API + Human Feedback Loop]
-F --> G[Retraining]
-G --> B
+### Project Goals
 
+| Phase | Focus | Status |
+|-------|-------|--------|
+| Phase 1 | Repo setup + clean documentation | ✅ Started |
+| Phase 2 | Data preparation + normalization pipeline | ⏳ Next |
+| Phase 3 | Hybrid text + metadata classifier (baseline) | 🔜 Planned |
+| Phase 4 | Continuous taxonomy refinement + automation | 🔜 Planned |
 
----
+### Key Concepts
 
-## Visão Geral (PT)
-
-O **Hybrid Product AI Classifier** é um projeto profissional criado para normalizar e categorizar dados de produtos de e-commerce. Combina **datasets reais e sintéticos** para simular cenários próximos do mundo real, com pipeline bilíngue (EN + PT). O sistema utiliza **Word2Vec + XGBoost** para categorização inteligente e inclui uma interface minimalista para validação humana.
-
-**Funcionalidades Principais:**
-- Pré-processamento bilíngue de dados
-- Embeddings Word2Vec para compreensão semântica
-- Classificador XGBoost como baseline
-- Deduplicação de produtos e clustering
-- API + interface minimalista
-- Arquitetura modular e pronta para produção
+- NLP embeddings for multilingual product descriptions
+- Attribute-driven machine learning classification
+- Taxonomy governance and normalization rules
+- Confidence scoring for human validation workflows
 
 ---
 
-## Roadmap – Etapa 1
+## Português — Visão Geral
 
-1. Setup repository (main protected, dev branch)  
-2. Create folder structure + placeholder files  
-3. Add `requirements.txt` for Python 3.11.x  
-4. Create initial notebook `01_eda.ipynb`  
-5. Add sample bilingual dataset (real + synthetic)  
-6. Apply initial cleaning pipeline and generate WordClouds  
-7. Create Kanban / issues for tasks  
+O **Hybrid Product AI Classifier** é um projeto prático de machine learning para classificar peças e componentes de produtos a partir de:
+
+- **Dados estruturados**  
+  (atributos técnicos, categorias, grupos funcionais)
+- **Dados não estruturados**  
+  (descrições, textos de manuais, padrões de nomenclatura)
+
+O objetivo é organizar catálogos em uma **taxonomia técnica padronizada**, suportando produtos premium (Eletrodomésticos, HVAC, Adegas, Churrasqueiras etc.).
+
+### Objetivos do Projeto
+
+| Fase | Descrição | Status |
+|------|-----------|--------|
+| Fase 1 | Configuração inicial + documentação | ✅ Iniciada |
+| Fase 2 | Pipeline de preparação e normalização | ⏳ Próxima |
+| Fase 3 | Classificador híbrido (texto + atributos) | 🔜 Planejada |
+| Fase 4 | Automação e evolução da taxonomia | 🔜 Planejada |
+
+### Tecnologias previstas
+
+- Python 3.10+
+- Scikit-Learn ou LightGBM
+- FastText / Word2Vec / Sentence Transformers
+- Pandas + NumPy
+- (opcional futuro) Modelo generativo para enriquecimento semântico
+
+---
+
+### Status Atual
+
+> Documentação inicial criada  
+> Infra de dados será configurada na próxima etapa
+
+---
+
+**Author**: *Ananias Araujo*  
+*Premium Technical Communication + Applied Machine Learning*
+
+---
+
+> If you use or reference this project in industry or academia, please cite and credit the original author.
 
 
